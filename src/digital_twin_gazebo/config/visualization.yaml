@@ -1,0 +1,16 @@
+# Visualization Configuration
+visualization:
+  enable_unity_bridge: true      # Enable ROS 2 to Unity bridge
+  unity_ip_address: "127.0.0.1"  # Unity application IP address
+  unity_port: 10000              # Unity application port
+  sync_rate: 30                  # Synchronization rate (Hz)
+  visualization_quality: "medium"  # Options: "low", "medium", "high"
+  enable_shadows: true           # Enable shadow rendering
+  lighting_mode: "realistic"     # Options: "realistic", "performance"
+
+# Rendering Settings
+rendering:
+  enable_antialiasing: true      # Enable antialiasing
+  render_distance: 100.0         # Maximum render distance (meters)
+  field_of_view: 60.0            # Field of view for cameras (degrees)
+  texture_quality: "high"        # Options: "low", "medium", "high"

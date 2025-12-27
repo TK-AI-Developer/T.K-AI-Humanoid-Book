@@ -1,0 +1,13 @@
+# Biological Nervous System vs ROS 2 Architecture
+
+## Biological Nervous System
+Sensory Organs -> Spinal Cord -> Brain -> Motor Neurons -> Muscles
+
+## ROS 2 Architecture
+Sensors -> Topics -> Processing Nodes -> Service Calls -> Actuators
+
+## Key Similarities
+- Distributed processing
+- Communication via signals/messages
+- Coordination between components
+- Feedback loops for control

@@ -1,0 +1,16 @@
+# Nodes, Topics, and Services Communication Flow
+
+## Topic Communication (Publish-Subscribe)
+Publisher Node -> Topic -> Subscriber Node
+Multiple publishers can send to one topic
+Multiple subscribers can receive from one topic
+
+## Service Communication (Request-Response)
+Client Node -> Service Request -> Server Node
+Server Node -> Service Response -> Client Node
+One-to-one communication pattern
+
+## Example: Humanoid Robot
+Sensors (Node) -> Sensor Data (Topic) -> Perception (Node)
+Motion Planner (Node) -> Trajectory (Service Request) -> Controller (Node)
+Controller (Node) -> Response (Service Response) -> Motion Planner (Node)

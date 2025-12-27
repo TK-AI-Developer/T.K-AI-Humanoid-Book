@@ -1,0 +1,42 @@
+# Perception Configuration
+sensors:
+  lidar:
+    enable: true
+    topic: "/sensor_data/lidar"
+    type: "sensor_msgs/LaserScan"
+    frequency: 10.0               # Hz
+    noise_model: "gaussian"       # Options: "gaussian", "uniform", "none"
+    noise_std_dev: 0.01           # Standard deviation for Gaussian noise
+    range_min: 0.1                # Minimum range (meters)
+    range_max: 30.0               # Maximum range (meters)
+    angle_min: -2.3562            # Minimum angle (radians, -135 degrees)
+    angle_max: 2.3562             # Maximum angle (radians, 135 degrees)
+    angle_increment: 0.0087       # Angular resolution (radians, 0.5 degrees)
+
+  depth_camera:
+    enable: true
+    topic: "/sensor_data/depth_camera"
+    type: "sensor_msgs/Image"
+    frequency: 15.0               # Hz
+    noise_model: "gaussian"       # Options: "gaussian", "uniform", "none"
+    noise_std_dev: 0.005          # Standard deviation for Gaussian noise
+    width: 640                    # Image width (pixels)
+    height: 480                   # Image height (pixels)
+    fov_horizontal: 1.0472        # Horizontal field of view (radians, 60 degrees)
+
+  imu:
+    enable: true
+    topic: "/sensor_data/imu"
+    type: "sensor_msgs/Imu"
+    frequency: 100.0              # Hz
+    noise_model: "gaussian"       # Options: "gaussian", "uniform", "none"
+    linear_acceleration_noise: 0.017  # Standard deviation for linear acceleration (m/s^2)
+    angular_velocity_noise: 0.0087    # Standard deviation for angular velocity (rad/s)
+    orientation_noise: 0.001          # Standard deviation for orientation (rad)
+
+# Perception Settings
+perception:
+  enable_noise_models: true       # Enable noise models for all sensors
+  complexity_level: "medium"      # Options: "low", "medium", "high"
+  computational_budget: "medium"  # Options: "low", "medium", "high"
+  data_compression: "none"        # Options: "none", "lossless", "lossy"

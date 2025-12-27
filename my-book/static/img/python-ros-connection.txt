@@ -1,0 +1,13 @@
+# Python AI Agent Connecting to ROS Controllers
+
+## Architecture
+Python AI Agent (using rclpy)
+         |
+         v
+ROS 2 Middleware
+         |
+         v
+ROS Controllers (joint_trajectory_controller, etc.)
+
+## Communication Flow
+Python AI Agent -> Topics/Services/Actions -> ROS Controllers -> Robot Hardware

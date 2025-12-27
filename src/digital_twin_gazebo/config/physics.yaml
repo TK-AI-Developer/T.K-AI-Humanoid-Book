@@ -1,0 +1,15 @@
+# Physics Configuration
+physics:
+  gravity: [0.0, 0.0, -9.81]  # Standard gravity
+  step_size: 0.001              # Simulation step size (seconds)
+  real_time_factor: 1.0         # Real-time simulation factor
+  max_update_rate: 1000.0       # Maximum update rate (Hz)
+  damping: 0.1                  # General damping factor
+  friction_model: "ode"         # Friction model (ode, bullet, simbody)
+
+# Fidelity Settings
+fidelity:
+  high_fidelity: false          # Enable high fidelity simulation
+  performance_mode: "balanced"  # Options: "performance", "balanced", "accuracy"
+  adaptive_step_size: true      # Use adaptive step size
+  solver_iterations: 100        # Number of solver iterations
